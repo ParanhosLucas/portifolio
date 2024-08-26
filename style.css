@@ -1,26 +1,26 @@
-
 /* ESTILILO GERAL*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     background-color: black;
     height: 100vh;
 }
 
-.interface{
+.interface {
     max-width: 1280px;
     margin: 0 auto;
 }
 
-.flex{
+.flex {
     display: flex;
 }
-.btn-contato button{
+
+.btn-contato button {
     padding: 10px;
     font-size: 18px;
     font-weight: 600;
@@ -32,152 +32,227 @@ body{
 
 }
 
-h2.titulo{
+h2.titulo {
     color: white;
     font-size: 42px;
     text-align: center;
 }
 
-h2.titulo span{
+h2.titulo span {
     color: #4a87ce;
 }
 
-button:hover, form .btn-enviar input:hover{
+button:hover,
+form .btn-enviar input:hover {
     box-shadow: 0px 0px 8px #4a88ced2;
     transform: scale(1.10);
 }
 
 
 /* ESTILO DO CABEÇALHO */
-header{
-    padding: 30px 4%; 
+header {
+    padding: 30px 4%;
 }
 
-header > .interface{
-    display:flex;
+header .interface {
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header a{
+header a {
     color: rgb(83, 83, 83);
     text-decoration: none;
     display: inline-block;
     transition: .2s;
 }
 
-header a:hover{
+header nav.menu-desktop a:hover {
     color: white;
     transform: scale(1.10);
 }
 
-header nav ul{
+header nav ul {
     list-style-type: none;
 }
 
-header nav ul li{
+header nav.menu-desktop ul li {
     display: inline-block;
     padding: 0 40px;
 }
 
+
+
+/* ESTILO MENU MOBILE */
+.btn-abrir-menu i {
+    color: #4a87ce;
+    font-size: 40px;
+    padding: 220%;
+}
+
+.menu-mobile {
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu~.overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #4a87ce;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #4a87ce;
+}
+
+overlay-menu {
+    background-color: #000000a7;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 888888;
+    display: none;
+}
+
 /* ESTILO DO TOPO DO SITE */
 
-section.topo-do-site{
+section.topo-do-site {
     padding: 40px 4%;
 }
 
-section.topo-do-site .flex{
+section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
     gap: 90px;
 }
 
-.topo-do-site h1{
+.topo-do-site h1 {
     color: white;
     font-size: 40px;
     line-height: 40px;
 }
 
-.topo-do-site .txt-topo-site h1 span{
+.topo-do-site .txt-topo-site h1 span {
     color: #4a87ce;
 }
 
-.topo-do-site .txt-topo-site p{
+.topo-do-site .txt-topo-site p {
     color: white;
     margin: 40px 0;
 }
 
-.topo-do-site .img-topo-site img{
+.topo-do-site .img-topo-site img {
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
-@keyframes flutuar{
-    0%
-    {
+
+@keyframes flutuar {
+    0% {
         top: 0;
     }
-    100%{
+
+    100% {
         top: 30px;
     }
 }
 
 /* ESTILO DAS ESPECIALIDADES */
 
-section.especialidades{
+section.especialidades {
     padding: 40px 4%;
 }
-section.especialidades .flex{
+
+section.especialidades .flex {
     gap: 60px;
 }
 
-.especialidades-box{
+.especialidades-box {
     color: white;
     padding: 40px;
     border-radius: 20px;
     margin-top: 45px;
     transition: .2;
-    
-    h3{
+
+    h3 {
         font-size: 28px;
         margin: 15px 0;
     }
 }
-.especialidades .especialidades-box i{
+
+.especialidades .especialidades-box i {
     color: #4a87ce;
     font-size: 70px;
 }
-.especialidades-box:hover{
+
+.especialidades-box:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px #ffffff78;
 }
 
 /* ESTILO DO SOBRE */
 
-section.sobre{
+section.sobre {
     padding: 80px 4%;
 }
 
-section.sobre .flex{
+section.sobre .flex {
     align-items: center;
     gap: 60px;
 }
-.sobre .txt-sobre{
+
+.sobre .txt-sobre {
     color: white;
 }
-.sobre .txt-sobre h2{
+
+.sobre .txt-sobre h2 {
     font-size: 40px;
     line-height: 45px;
     margin-bottom: 30px;
 }
-.sobre .txt-sobre h2 span{
+
+.sobre .txt-sobre h2 span {
     color: #4a87ce;
     display: block;
 }
-.sobre .txt-sobre p{
+
+.sobre .txt-sobre p {
     margin: 25px 0;
     text-align: justify;
 }
-.btn-social button{
+
+.btn-social button {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -188,27 +263,28 @@ section.sobre .flex{
     margin: 0 5px;
     transition: .2s;
 }
+
 .sobre img {
-    
+
     border-radius: 50px;
     border: 3px solid #4a87ce;
 
 }
 
 /* ESTILO DO PORTIFOLIO */
-section.portifolio{
+section.portifolio {
     padding: 80px 4%;
     box-shadow: 0 0 20px 10px #ffffff28;
-    
+
 }
 
-section.portifolio .flex{
+section.portifolio .flex {
     justify-content: space-around;
     margin-top: 60px;
 
 }
 
-.img-port{
+.img-port {
     width: 360px;
     height: 460px;
     background-size: cover;
@@ -219,11 +295,11 @@ section.portifolio .flex{
     position: relative;
 }
 
-.img-port:hover{
+.img-port:hover {
     background-position: 100% 100%;
 }
 
-.overlay{
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -241,18 +317,18 @@ section.portifolio .flex{
     transition: .5s;
 }
 
-.overlay:hover{
+.overlay:hover {
     opacity: 1;
 }
 
 /* ESTILO DO FORMULARIO DE CONTATO */
 
-section.formulario{
+section.formulario {
     padding: 80px 4%;
-    
+
 }
 
-form{
+form {
     max-width: 500px;
     margin: 0 auto;
     display: flex;
@@ -263,7 +339,8 @@ form{
 
 }
 
-form input, form textarea{
+form input,
+form textarea {
     width: 100%;
     background-color: #242424;
     border: 0;
@@ -275,25 +352,25 @@ form input, form textarea{
 
 }
 
-form textarea{
+form textarea {
     resize: none;
     max-height: 200px;
 }
 
-form input::placeholder{
+form input::placeholder {
     color: #4a87ce;
 }
 
-form textarea::placeholder{
+form textarea::placeholder {
     color: #4a87ce;
 }
 
-form .btn-enviar{
+form .btn-enviar {
     margin-top: 20px;
     text-align: center;
 }
 
-form .btn-enviar input{
+form .btn-enviar input {
     width: 120px;
     background-color: #4a87ce;
     color: black;
@@ -304,34 +381,134 @@ form .btn-enviar input{
 
 /* ESTILO DO RODAPÉ */
 
-footer{
+footer {
     padding: 40px 4%;
     box-shadow: 0 0 20px 10px #ffffff28;
 }
 
-.logo-footer img{
+.logo-footer img {
     width: 65px;
-    
+
 }
 
-footer .flex{
+footer .flex {
     justify-content: space-between;
 }
 
-footer .line-footer{
+footer .line-footer {
     padding: 20px 0;
-    
+
 }
 
-.borda{
+.borda {
     border-top: 2px solid #4a87ce;
 }
 
-footer .line-footer p i{
+footer .line-footer p i {
     color: #4a87ce;
     font-size: 22px;
 }
 
-footer .line-footer p a{
+footer .line-footer p a {
     color: white;
+}
+/* ABRIR MENU DESKTOP */
+.btn-abrir-menu{
+    display: none;
+}
+
+@media screen and (max-width: 1020px) {
+
+    .btn-abrir-menu{
+        display: block;
+    }
+    /* CLASSES GERAIS */
+    .flex {
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    /* CABEÇALHO */
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+    /* TOPO DO SITE */
+
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
+
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 35px;
+
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+    }
+
+    /* ESPECIALIDADES */
+    section.especialidades {
+        padding: 40px 8%;
+    }
+
+    section.sobre {
+        flex-direction: column-reverse;
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social {
+        text-align: center;
+    }
+
+    .img-sobre img {
+        width: 100%
+    }
+
+    /* PORTIFOLIO */
+
+    section.portifolio {
+        padding: 80px 8%;
+
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    section.portifolio .flex {
+        gap: 60px;
+    }
+
+    /* RODAPÉ */
+
+    footer .flex {
+        flex-direction: column;
+    }
+
+    footer .line-footer {
+        text-align: center;
+    }
 }

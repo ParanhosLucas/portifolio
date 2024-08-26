@@ -15,6 +15,8 @@
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- FIM BOOTSTRAP -->
+
+    <script src="menu.js" defer></script>
     <title>Portifolio</title>
 </head>
 
@@ -36,11 +38,35 @@
                 </ul>
             </nav>
 
+
             <div class="btn-contato">
                 <a href="https://w.app/2Ca6L4">
                     <button>Contato</button>
                 </a>
-            </div>
+            </div><!--btn-contato-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div><!--btn-abrir-menu-->
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div><!--btn-fechar-->
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Especialidades</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+
+            </div><!--menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu">
+
+            </div><!--overlay-menu-->
         </div><!--interface-->
     </header><!--menu-->
 
@@ -100,11 +126,22 @@
 
                     <div class="txt-sobre">
                         <h2>MUITO PAZER, <span>ME CHAMO JAIME LUCAS.</h2></span>
-                        <p>Jaime Lucas é um estudante de Análise e Desenvolvimento de Software, com foco no desenvolvimento de habilidades técnicas e aplicação prática de conceitos teóricos. Demonstrando rapidez na assimilação de novas linguagens de programação, Eu busco constantemente o aprimoramento acadêmico e profissional. Comprometido com a excelência, colaboro ativamente em projetos e valoriza o trabalho em equipe, visando construir uma carreira sólida na área.</p>
-                        <p>Com um forte interesse em resolver problemas complexos e criar soluções inovadoras, Jaime Lucas tem se envolvido em projetos que exigem pensamento crítico e habilidades em programação. Seu comprometimento com a excelência é evidenciado pelo constante aprimoramento de suas competências e pela busca por conhecimento adicional, seja por meio de cursos, workshops ou participação em comunidades de desenvolvedores.</p>
+                        <p>Jaime Lucas é um estudante de Análise e Desenvolvimento de Software, com foco no
+                            desenvolvimento de habilidades técnicas e aplicação prática de conceitos teóricos.
+                            Demonstrando rapidez na assimilação de novas linguagens de programação, Eu busco
+                            constantemente o aprimoramento acadêmico e profissional. Comprometido com a excelência,
+                            colaboro ativamente em projetos e valoriza o trabalho em equipe, visando construir uma
+                            carreira sólida na área.</p>
+                        <p>Com um forte interesse em resolver problemas complexos e criar soluções inovadoras, Jaime
+                            Lucas tem se envolvido em projetos que exigem pensamento crítico e habilidades em
+                            programação. Seu comprometimento com a excelência é evidenciado pelo constante aprimoramento
+                            de suas competências e pela busca por conhecimento adicional, seja por meio de cursos,
+                            workshops ou participação em comunidades de desenvolvedores.</p>
                         <div class="btn-social">
-                            <a href="https://www.linkedin.com/in/lucassparanhos/"><button><i class="bi bi-linkedin"></i></button></a>
-                            <a href="https://www.instagram.com/lucasparanhos_/"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://www.linkedin.com/in/lucassparanhos/"><button><i
+                                        class="bi bi-linkedin"></i></button></a>
+                            <a href="https://www.instagram.com/lucasparanhos_/"><button><i
+                                        class="bi bi-instagram"></i></button></a>
                             <a href="https://w.app/2Ca6L4"><button><i class="bi bi-whatsapp"></i></button></a>
                         </div><!--btn-social-->
                     </div><!--txt-sobre-->
@@ -152,11 +189,13 @@
                         <img src="images/logo footer.png" alt="Logotipo Jaime Lucas">
                     </div><!--logo-footer-->
                     <div class="btn-social">
-                        <a href="https://www.linkedin.com/in/lucassparanhos/"><button><i class="bi bi-linkedin"></i></button></a>
-                        <a href="https://www.instagram.com/lucasparanhos_/"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://www.linkedin.com/in/lucassparanhos/"><button><i
+                                    class="bi bi-linkedin"></i></button></a>
+                        <a href="https://www.instagram.com/lucasparanhos_/"><button><i
+                                    class="bi bi-instagram"></i></button></a>
                         <a href="https://w.app/2Ca6L4"><button><i class="bi bi-whatsapp"></i></button></a>
                     </div><!--btn-social-->
-            </div><!--flex-->
+                </div><!--flex-->
             </div><!--line-footer-->
 
 
@@ -164,7 +203,8 @@
                 <h1></h1>
             </div>
             <div class="line-footer borda">
-                <p><i class="bi bi-envelope"></i> <a href="mailto:luc.tenorio@hotmail.com">luc.tenorio@hotmail.com</a></p>
+                <p><i class="bi bi-envelope"></i> <a href="mailto:luc.tenorio@hotmail.com">luc.tenorio@hotmail.com</a>
+                </p>
             </div><!--line-footer-->
         </div><!--interface-->
     </footer><!--rodapé-->
